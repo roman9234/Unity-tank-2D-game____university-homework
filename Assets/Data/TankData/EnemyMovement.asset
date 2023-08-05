@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e461e1146232774a97ff70e7c37bcbb, type: 3}
   m_Name: EnemyMovement
   m_EditorClassIdentifier: 
-  maxSpeed: 50
-  rotationSpeed: 60
-  acceleration: 70
+  maxSpeed: 100
+  rotationSpeed: 70
+  acceleration: 100
   deacceleration: 150
   dragDeacceleration: 70

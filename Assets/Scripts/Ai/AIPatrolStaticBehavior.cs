@@ -19,6 +19,7 @@ public class AIPatrolStaticBehavior : AIBehaviour
     }
     public override void PerformAction(TankController tank, AIDetector detector)
     {
+        tank.HandleMoveBody(Vector2.zero);
         float angle = Vector2.Angle(tank.aimTurret.transform.right, randomDirection);
         if (currentPatrolDelay <= 0 && (angle < 2))
         {
