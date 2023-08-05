@@ -12,10 +12,11 @@ public class GameManager : MonoBehaviour
     public int lv1_en = 1;
     public int lv2_en = 2;
     public int lv3_en = 3;
+    public int lv4_en = 6;
     public int cur_en = 0; //текущее число врагов
-    public int final_scene = 3; //последний уровень
-    public int win_window = 4;
-    public int lose_window = 5;
+    public int final_scene = 4; //последний уровень
+    public int win_window = 5;
+    public int lose_window = 6;
 
     private void Awake()
     {
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
         cur_en -= 1;
         if (cur_en <= 0 )
         {
-            if (SceneManager.GetActiveScene().buildIndex == 3)
+            if (SceneManager.GetActiveScene().buildIndex == final_scene)
             {
                 G_win();
             }
@@ -67,6 +68,8 @@ public class GameManager : MonoBehaviour
                 return lv2_en;
             case 3:
                 return lv3_en;
+            case 4:
+                return lv4_en;
             default:
                 return 0;
         }
